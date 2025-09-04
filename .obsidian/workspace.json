@@ -35,24 +35,14 @@
             "id": "51ff28dada7290de",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "08_Tutorials/Git Basics.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
+                "aFile": "08_Tutorials/Git Basics.md",
+                "bFile": "08_Tutorials/Git Basics.md",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Git Basics"
+              "icon": "diff",
+              "title": "Diff: Git Basics"
             }
           }
         ],
@@ -109,7 +99,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -237,18 +228,19 @@
   },
   "active": "51ff28dada7290de",
   "lastOpenFiles": [
+    "2025-09-04.md",
+    "08_Tutorials/Git Basics.md",
+    "04_Journal/2025-09-03.md",
+    "07_Media/Thinking Emoji.png",
+    "07_Media/Numbers hmmm.png",
+    "07_Media/Monday ahhh.png",
+    "07_Media/Git & Github Tutorial.md",
     "03_Tasks/Master task list.md",
     "06_Productivity/Productivity Habits.md",
-    "07_Media/Thinking Emoji.png",
-    "07_Media/Git & Github Tutorial.md",
-    "07_Media/Monday ahhh.png",
-    "07_Media/Numbers hmmm.png",
-    "08_Tutorials/Git Basics.md",
     "09_Excalidraw/Github Flows.md",
     "07_Media/Annoyed Uncle.png",
     "07_Media/Pasted Image 20250903213020_708.png",
     "09_Excalidraw/Automation Planning - Slackbot.md",
-    "2025-09-04.md",
     "08_Tutorials",
     "Untitled.base",
     "02_Projects/Basecamp Automations.md",
@@ -262,7 +254,6 @@
     "01_Maps_of_minds/Iceberg Model.md",
     "01_Maps_of_minds/Visual Thinking.md",
     "09_Excalidraw",
-    "04_Journal/2025-09-03.md",
     "04_Journal/Drawing 2025-09-03 19.54.06.excalidraw.md",
     "2025-09-03.md",
     "Untitled.canvas",

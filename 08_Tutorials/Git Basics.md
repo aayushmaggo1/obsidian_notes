@@ -112,6 +112,12 @@ git merge <branch-name>
 
 ## Working with Remotes
 
+Adding a remote connection
+
+ ```bash
+git remote add origin https://github.com/repo.git
+```
+
 List connected remotes:
 
 ```bash
