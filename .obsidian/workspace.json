@@ -6,14 +6,15 @@
       {
         "id": "acb9b89e87f92cf3",
         "type": "tabs",
+        "dimension": 99.99999999999999,
         "children": [
           {
-            "id": "ad223c914a5bfd4d",
+            "id": "a304858c8c033aa2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08_Tutorials/Git Basics.md",
+                "file": "zettacasting_workflow_obsidian_note.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,25 +29,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Git Basics"
-            }
-          },
-          {
-            "id": "51ff28dada7290de",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "08_Tutorials/Git Basics.md",
-                "bFile": "08_Tutorials/Git Basics.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: Git Basics"
+              "title": "zettacasting_workflow_obsidian_note"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,12 +85,12 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "85c2be3b936ae67f",
@@ -113,15 +99,62 @@
       {
         "id": "5ab7a6b6becaaf36",
         "type": "tabs",
-        "dimension": 45.45454545454546,
+        "dimension": 55.83333333333334,
         "children": [
           {
-            "id": "0b63f9ab0974661f",
+            "id": "64a4e4c4fe5c4135",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "zettacasting_workflow_obsidian_note.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.4628354417744053,
+                  "close": true
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of zettacasting_workflow_obsidian_note"
+            }
+          },
+          {
+            "id": "6258846119c3ce7d",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "5aab1787d4b341cc",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "08_Tutorials/Git Basics.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,25 +164,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Git Basics"
+              "title": "Backlinks for Untitled"
             }
           },
           {
-            "id": "c6b53bec580687d1",
+            "id": "94f3c4028125f582",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_Tasks/Master task list.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Master task list"
+              "title": "Outgoing links from Untitled"
             }
           },
           {
-            "id": "0b218edba1554d2e",
+            "id": "c5aba200314ee3c3",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -164,37 +197,26 @@
             }
           },
           {
-            "id": "fa1450acf713044f",
+            "id": "9cdc596e338feee3",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "08_Tutorials/Git Basics.md",
+                "file": "Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Git Basics"
-            }
-          },
-          {
-            "id": "26e500593310ee0b",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "Outline of Untitled"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "64823937f4b1ff45",
         "type": "tabs",
-        "dimension": 54.54545454545455,
+        "dimension": 44.16666666666666,
         "children": [
           {
             "id": "ee8e601c551fc3db",
@@ -210,61 +232,69 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
+      "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
       "bases:Create new base": false,
-      "media-extended:Open media": false,
       "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-git:Open Git source control": false
+      "obsidian-git:Open Git source control": false,
+      "media-extended:Open media": false,
+      "command-palette:Open command palette": false
     }
   },
-  "active": "51ff28dada7290de",
+  "active": "a304858c8c033aa2",
   "lastOpenFiles": [
-    "2025-09-04.md",
+    "Untitled.md",
+    "zettacasting_workflow_obsidian_note.md",
+    "08_Tutorials/Flask/Flask - Get vs Post.md",
+    "08_Tutorials/Flask/Flask Hub.md",
     "08_Tutorials/Git Basics.md",
-    "04_Journal/2025-09-03.md",
-    "07_Media/Thinking Emoji.png",
-    "07_Media/Numbers hmmm.png",
-    "07_Media/Monday ahhh.png",
-    "07_Media/Git & Github Tutorial.md",
+    "08_Tutorials/Flask/Flask - Overview.md",
+    "Flask Examples.md",
+    "Object Oriented Programming Classes.md",
+    "Python OOP Tutorial 3 classmethods and staticmethods.md",
+    "Web Application Framework.md",
+    "08_Tutorials/Flask",
+    "Media Note - CS50x 2025 - Lecture 9 - Flask.md",
+    "Media Note - CS50x 2025 - Lecture 9 - Flask 1.md",
+    "2025-09-05.md",
     "03_Tasks/Master task list.md",
-    "06_Productivity/Productivity Habits.md",
-    "09_Excalidraw/Github Flows.md",
-    "07_Media/Annoyed Uncle.png",
-    "07_Media/Pasted Image 20250903213020_708.png",
+    "01_Maps_of_minds/Visual Thinking.md",
+    "01_Maps_of_minds/Iceberg Model.md",
+    "01_Maps_of_minds/Team Communication Flows.md",
+    "01_Maps_of_minds/Systems thinking.md",
+    "01_Maps_of_minds/Automation.md",
+    "06_Productivity/07_Media/Git & Github Tutorial.md",
+    "2025-09-04.md",
     "09_Excalidraw/Automation Planning - Slackbot.md",
+    "09_Excalidraw/Github Flows.md",
+    "Elements & Relationships.md",
+    "Excalidraw/Drawing 2025-09-04 14.12.39.excalidraw.md",
+    "Excalidraw/Drawing 2025-09-04 14.12.44.excalidraw.md",
+    "06_Productivity/07_Media/Iceberg model image.png",
+    "Pasted image 20250904223700.png",
+    "Excalidraw",
+    "06_Productivity/07_Media/Thinking Emoji.png",
+    "06_Productivity/07_Media/Numbers hmmm.png",
+    "06_Productivity/07_Media/Monday ahhh.png",
+    "06_Productivity/07_Media/Annoyed Uncle.png",
+    "07_Media/Pasted Image 20250903213020_708.png",
     "08_Tutorials",
     "Untitled.base",
-    "02_Projects/Basecamp Automations.md",
-    "02_Projects/Fulfillio.md",
-    "01_Maps_of_minds/Team Communication Flows.md",
-    "01_Maps_of_minds/Automation.md",
-    "Excalidraw/Drawing 2025-09-03 20.47.58.excalidraw.md",
-    "02_Projects/Drawing 2025-09-03 22.54.01.excalidraw.md",
-    "07_Media",
-    "01_Maps_of_minds/Systems thinking.md",
-    "01_Maps_of_minds/Iceberg Model.md",
-    "01_Maps_of_minds/Visual Thinking.md",
+    "06_Productivity/07_Media",
     "09_Excalidraw",
-    "04_Journal/Drawing 2025-09-03 19.54.06.excalidraw.md",
-    "2025-09-03.md",
     "Untitled.canvas",
-    "as.md",
-    "Welcome.md",
     "06_Productivity",
     "05_Resources",
     "04_Journal",
     "03_Tasks",
-    "02_Projects",
-    "01_Maps_of_minds",
     "Untitled 1.canvas"
   ]
 }

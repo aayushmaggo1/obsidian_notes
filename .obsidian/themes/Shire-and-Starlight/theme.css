@@ -1,0 +1,328 @@
+/*
+ Shire & Starlight – a LOTR-inspired Obsidian theme
+ Light = Hobbiton parchment; Dark = Rivendell starlight
+ Creator: Aayush + Kiki
+*/
+
+/* ===== Optional web fonts ===== */
+@font-face {
+    font-family: "EB Garamond";
+    src: local("EB Garamond"), url("https://fonts.gstatic.com/s/ebgaramond/v26/SlGWmQSNjdsmc35JDF1K5GR1SDk.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Crimson Pro";
+    src: local("Crimson Pro"), url("https://fonts.gstatic.com/s/crimsonpro/v26/q5uBsoQnNn4tN6soqI75.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Cormorant Garamond";
+    src: local("Cormorant Garamond"), url("https://fonts.gstatic.com/s/cormorantgaramond/v16/co3bmWZ8kjZuErj9TaY-s0KSozY.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Gandalf Smallcaps";
+    src: local("Cinzel"), url("https://fonts.gstatic.com/s/cinzel/v24/8vIK7w0420QQ9CMp.woff2") format("woff2");
+    font-display: swap;
+  }
+  
+  /* ===== Root tokens ===== */
+  :root {
+    --font-ui: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Crimson Pro", sans-serif;
+    --font-text: "EB Garamond", "Crimson Pro", Georgia, serif;
+    --font-headings: "Cormorant Garamond", "Cinzel", Georgia, serif;
+    --font-smallcaps: "Gandalf Smallcaps", "Cinzel", serif;
+  
+    /* Accent families for realms */
+    --accent-elf: 198 60% 45%;    /* teal-silver */
+    --accent-hobbit: 110 35% 36%; /* moss green */
+    --accent-dwarf: 28 70% 44%;   /* burnished gold */
+    --accent-gondor: 210 18% 90%; /* white tree highlights on dark */
+  
+    /* Interactive accent (you can switch between realms) */
+    --accent-h: var(--accent-elf);
+  
+    /* Radii & shadows */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --shadow-soft: 0 6px 18px rgba(0,0,0,.12);
+    --ring: 0 0 0 2px hsl(var(--accent-h) / .25);
+  
+    /* Type scale */
+    --fs-1: clamp(2.1rem, 1.7rem + 1.5vw, 3rem);
+    --fs-2: clamp(1.7rem, 1.4rem + 1vw, 2.2rem);
+    --fs-3: 1.35rem;
+    --fs-4: 1.15rem;
+    --fs-5: 1rem;
+  
+    /* Subtle parchment noise (data URI) */
+    --paper-noise: radial-gradient(1200px 800px at 20% 0%, rgba(0,0,0,.03), transparent 70%),
+                   radial-gradient(800px 600px at 80% 100%, rgba(0,0,0,.04), transparent 60%);
+  
+    /* Elven star glimmer */
+    --starlight: radial-gradient(600px 300px at 70% -10%, rgba(180,220,255,.07), transparent 60%),
+                 radial-gradient(800px 500px at 10% 110%, rgba(150,255,220,.05), transparent 60%);
+  }
+  
+  /* ===== Light (Shire) ===== */
+  .theme-light {
+    --bg: 44 45% 94%;    /* warm parchment */
+    --bg-soft: 44 45% 98%;
+    --bg-elev: 44 40% 92%;
+    --text: 26 40% 20%;
+    --muted: 26 20% 38%;
+    --link: var(--accent-h);
+    --selection: 55 80% 75%;
+    --hr: 28 30% 70%;
+    --code-bg: 45 35% 90%;
+    --quote-bg: 45 35% 95%;
+    --border: 30 20% 75%;
+    --callout: 110 25% 88%;
+    --scroll: 30 10% 60%;
+    --caret: 110 35% 32%;
+  }
+  
+  /* ===== Dark (Starlight) ===== */
+  .theme-dark {
+    --bg: 210 20% 10%;   /* moonlit spruce */
+    --bg-soft: 210 22% 12%;
+    --bg-elev: 210 20% 15%;
+    --text: 210 25% 90%;
+    --muted: 210 10% 70%;
+    --link: var(--accent-h);
+    --selection: 198 50% 22%;
+    --hr: 210 12% 28%;
+    --code-bg: 210 18% 14%;
+    --quote-bg: 210 18% 12%;
+    --border: 210 12% 26%;
+    --callout: 198 20% 16%;
+    --scroll: 210 10% 40%;
+    --caret: 198 70% 60%;
+  }
+  
+  /* ===== Global ===== */
+  body {
+    font-family: var(--font-text);
+    color: hsl(var(--text));
+    background:
+      linear-gradient(to bottom, hsl(var(--bg-soft)), hsl(var(--bg))) fixed,
+      var(--paper-noise),
+      var(--starlight);
+    background-color: hsl(var(--bg));
+  }
+  .workspace-leaf, .modal, .popover {
+    background-color: hsl(var(--bg-elev));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* App UI */
+  .app-container,
+  .workspace-split,
+  .workspace-tabs {
+    backdrop-filter: saturate(110%) blur(2px);
+  }
+  
+  /* Scrollbar: silver branches */
+  ::-webkit-scrollbar { width: 12px; height: 12px; }
+  ::-webkit-scrollbar-track { background: hsl(var(--bg-soft)); border-radius: 12px; }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, hsl(var(--scroll)), hsl(var(--scroll) / .7));
+    border-radius: 12px;
+    border: 2px solid hsl(var(--bg-soft));
+  }
+  
+  /* Selection glimmer */
+  ::selection { background: hsl(var(--selection)); color: hsl(var(--text)); }
+  
+  /* ===== Typography ===== */
+  .markdown-preview-view, .cm-s-obsidian, .mod-root {
+    font-size: var(--fs-5);
+  }
+  .markdown-preview-view h1, .cm-header-1 { font-family: var(--font-headings); font-size: var(--fs-1); letter-spacing: .5px; }
+  .markdown-preview-view h2, .cm-header-2 { font-family: var(--font-headings); font-size: var(--fs-2); }
+  .markdown-preview-view h3, .cm-header-3 { font-family: var(--font-headings); font-size: var(--fs-3); }
+  h1, h2, h3 { line-height: 1.15; }
+  h1 { text-transform: none; }
+  .cm-strong, strong { font-variant-ligatures: common-ligatures; }
+  em { text-shadow: 0 0 0 transparent; }
+  
+  /* Smallcaps spice for frontmatter titles */
+  .frontmatter-container .frontmatter-section-title,
+  .view-header-title,
+  .status-bar-item.plugin-word-count .metadata-label {
+    font-family: var(--font-smallcaps);
+    letter-spacing: .06em;
+    text-transform: none;
+  }
+  
+  /* Links: elven glow */
+  a,
+  .cm-link,
+  .internal-link {
+    color: hsl(var(--link));
+    text-decoration-color: hsl(var(--link) / .35);
+    text-underline-offset: 2px;
+  }
+  a:hover,
+  .cm-link:hover,
+  .internal-link:hover {
+    text-shadow: 0 0 6px hsl(var(--link) / .7);
+  }
+  
+  /* ===== Editor chrome ===== */
+  .workspace-tab-header.is-active {
+    background: linear-gradient( to bottom, hsl(var(--bg-elev)), hsl(var(--bg-soft)) );
+    border-bottom: 2px solid hsl(var(--link));
+  }
+  .view-header {
+    background: linear-gradient( to right, hsl(var(--bg-elev)), transparent );
+    border-bottom: 1px solid hsl(var(--border));
+  }
+  
+  /* Status bar: White Tree motif (subtle) */
+  .status-bar {
+    background: linear-gradient( to right, hsl(var(--bg-elev)), hsl(var(--bg-soft)) );
+    border-top: 1px solid hsl(var(--border));
+    position: relative;
+  }
+  .theme-dark .status-bar::before {
+    content: "⟡";
+    position: absolute; left: 10px; top: 50%; transform: translateY(-50%);
+    opacity: .35; font-size: 14px; filter: drop-shadow(0 0 1px rgba(255,255,255,.15));
+  }
+  
+  /* Sidebar nav */
+  .nav-file-title, .nav-folder-title {
+    border-radius: var(--radius-sm);
+    padding: 4px 8px;
+  }
+  .nav-file-title.is-active, .nav-folder-title.is-active,
+  .nav-file-title:hover, .nav-folder-title:hover {
+    background: hsl(var(--callout));
+    box-shadow: inset 0 0 0 1px hsl(var(--border));
+  }
+  
+  /* ===== Content elements ===== */
+  
+  /* Blockquotes: vellum + quill line */
+  blockquote {
+    background: hsl(var(--quote-bg));
+    border-left: 4px solid hsl(var(--accent-h));
+    padding: 10px 14px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+  
+  /* Code blocks: mithril plates */
+  .markdown-preview-view pre code,
+  .cm-s-obsidian .cm-line.HyperMD-codeblock {
+    background: hsl(var(--code-bg));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius-sm);
+    box-shadow: inset 0 0 0 1px hsl(var(--bg-soft) / .25);
+  }
+  
+  /* Inline code: rune tablets */
+  code, .cm-inline-code {
+    background: hsl(var(--code-bg));
+    padding: 2px 6px;
+    border-radius: 6px;
+    border: 1px solid hsl(var(--border));
+  }
+  
+  /* Checkboxes: leaves in light, star-silver in dark */
+  input[type="checkbox"] {
+    width: 1.05em; height: 1.05em;
+    border-radius: 6px;
+    accent-color: hsl(var(--accent-h));
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-soft);
+  }
+  
+  /* Tables: dwarven grids with gold lines in light, silver in dark */
+  .markdown-preview-view table {
+    border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-soft);
+  }
+  .markdown-preview-view th, .markdown-preview-view td {
+    border: 1px solid hsl(var(--border));
+    padding: 8px 10px;
+  }
+  
+  /* HR = traveler's road */
+  .markdown-preview-view hr {
+    border: none;
+    border-top: 1px dashed hsl(var(--hr));
+    margin: 1.2rem 0;
+  }
+  
+  /* ===== Callouts themed by realm ===== */
+  /* Use in notes:
+  > [!elf] Title
+  > content
+  */
+  .callout {
+    border: 1px solid hsl(var(--border));
+    border-left: 4px solid hsl(var(--accent-h));
+    border-radius: var(--radius-md);
+    background: linear-gradient( to bottom, hsl(var(--bg-elev)), hsl(var(--bg-soft)) );
+  }
+  
+  .callout[data-callout="elf"] {
+    --accent-h: var(--accent-elf);
+  }
+  .callout[data-callout="hobbit"] {
+    --accent-h: var(--accent-hobbit);
+  }
+  .callout[data-callout="dwarf"] {
+    --accent-h: var(--accent-dwarf);
+  }
+  .callout[data-callout="gondor"] {
+    --accent-h: 210 12% 70%;
+  }
+  
+  /* Icons for callouts */
+  .callout[data-callout="elf"] .callout-title::before { content: "✧"; margin-right: .5rem; }
+  .callout[data-callout="hobbit"] .callout-title::before { content: "🍃"; margin-right: .5rem; }
+  .callout[data-callout="dwarf"] .callout-title::before { content: "⛏"; margin-right: .5rem; }
+  .callout[data-callout="gondor"] .callout-title::before { content: "🌲"; margin-right: .5rem; }
+  
+  /* ===== Graph view tweaks: starlit constellations ===== */
+  .graph-view.color-fill { color: hsl(var(--link) / .9); }
+  .graph-view.color-line { color: hsl(var(--link) / .25); }
+  .graph-view.color-fill-tag { color: hsl(var(--accent-hobbit)); }
+  .graph-view.color-fill-unresolved { color: hsl(0 60% 55% / .8); }
+  
+  /* ===== Buttons & inputs ===== */
+  button, .clickable-icon, .mod-cta {
+    border-radius: var(--radius-sm);
+    border: 1px solid hsl(var(--border));
+    background: linear-gradient( to bottom, hsl(var(--bg-soft)), hsl(var(--bg-elev)) );
+  }
+  button:hover, .clickable-icon:hover, .mod-cta:hover {
+    box-shadow: var(--ring);
+  }
+  
+  /* ===== Command palette ===== */
+  .suggester,
+  .modal {
+    backdrop-filter: blur(6px) saturate(110%);
+  }
+  
+  /* ===== Focus outline: elven ring light ===== */
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent-h));
+    outline-offset: 2px;
+  }
+  
+  /* ===== Toggle quick palette between realms (optional classes) ===== */
+  /* Add one of these classes to <body> via Style Settings plugin if you want quick realm toggles */
+  body.realm-elf     { --accent-h: var(--accent-elf); }
+  body.realm-hobbit  { --accent-h: var(--accent-hobbit); }
+  body.realm-dwarf   { --accent-h: var(--accent-dwarf); }
+  body.realm-gondor  { --accent-h: 210 18% 86%; } /* pale silver */
+  
